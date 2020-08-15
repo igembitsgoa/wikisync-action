@@ -1,0 +1,1 @@
+Integrate WikiSync into your Github Actions workflow
