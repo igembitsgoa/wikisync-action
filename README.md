@@ -1,7 +1,7 @@
 Integrate WikiSync into your Github Actions workflow
 
-![License: MIT](https://img.shields.io/github/license/igembitsgoa/wikisync-action?style=for-the-badge)
-![GitHub release](https://img.shields.io/github/v/release/igembitsgoa/wikisync-action&style=for-the-badge)
+![License: MIT](https://img.shields.io/github/license/igembitsgoa/wikisync-action?style=for-the-badge) 
+![GitHub release](https://img.shields.io/github/v/release/igembitsgoa/wikisync-action?style=for-the-badge)
 
 # Github Action for iGEM WikiSync
 
