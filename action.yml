@@ -1,0 +1,36 @@
+name: 'iGEM WikiSync'
+description: 'Automatically deploy your iGEM Wiki.'
+author: 'Pranav Ballaney'
+inputs:
+  team:
+    description: 'iGEM team name'
+    required: true
+  source:
+    description: 'Directory that contains your iGEM Wiki'
+    required: true
+    default: 'dist'
+  build:
+    description: 'Directory that stores your processed wiki before deployment'
+    required: true
+    default: 'build'
+
+runs:
+  using: "composite"
+  steps: 
+    - name: Install WikiSync
+      run: pip install igem-wikisync
+      shell: bash
+
+    - name: Deploy to iGEM
+      run: python wikisync.py
+      shell: bash
+      env:
+        IGEM_USERNAME:   ${{ secrets.IGEM_USERNAME }}
+        IGEM_PASSWORD:   ${{ secrets.IGEM_PASSWORD }}
+        WIKISYNC_TEAM:   ${{ inputs.team }}
+        WIKISYNC_SOURCE: ${{ inputs.source }}
+        WIKISYNC_BUILD:  ${{ inputs.build }}
+
+    - name: Print Upload Map
+      run: cat upload_map.yml
+      shell: bash
