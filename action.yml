@@ -1,7 +1,9 @@
 name: 'iGEM WikiSync'
 description: 'Automatically deploy your iGEM Wiki.'
 author: 'Pranav Ballaney'
-icon: upload-cloud
+branding:
+  icon: 'upload-cloud'  
+  color: 'green'
 inputs:
   team:
     description: 'iGEM team name'
