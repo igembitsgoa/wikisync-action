@@ -25,7 +25,7 @@ runs:
       shell: bash
 
     - name: Deploy to iGEM
-      run: python wikisync.py
+      run: python ${{ github.action_path }}/wikisync.py
       shell: bash
       env:
         WIKISYNC_TEAM:   ${{ inputs.team }}
