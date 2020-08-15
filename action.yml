@@ -28,8 +28,6 @@ runs:
       run: python wikisync.py
       shell: bash
       env:
-        IGEM_USERNAME:   ${{ secrets.IGEM_USERNAME }}
-        IGEM_PASSWORD:   ${{ secrets.IGEM_PASSWORD }}
         WIKISYNC_TEAM:   ${{ inputs.team }}
         WIKISYNC_SOURCE: ${{ inputs.source }}
         WIKISYNC_BUILD:  ${{ inputs.build }}
