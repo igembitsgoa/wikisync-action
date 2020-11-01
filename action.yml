@@ -16,6 +16,10 @@ inputs:
     description: 'Directory that stores your processed wiki before deployment'
     required: true
     default: 'build'
+  poster:
+    description: 'Run iGEM WikiSync in Poster mode'
+    required: false
+    default: 'False'
 
 runs:
   using: "composite"
