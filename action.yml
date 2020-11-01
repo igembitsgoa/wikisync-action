@@ -21,7 +21,7 @@ runs:
   using: "composite"
   steps: 
     - name: Install WikiSync
-      run: pip install igem-wikisync==
+      run: pip install igem-wikisync==1.1.0a0
       shell: bash
 
     - name: Deploy to iGEM
