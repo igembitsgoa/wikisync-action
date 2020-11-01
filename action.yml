@@ -21,7 +21,7 @@ runs:
   using: "composite"
   steps: 
     - name: Install WikiSync
-      run: pip install igem-wikisync
+      run: pip install igem-wikisync==
       shell: bash
 
     - name: Deploy to iGEM
@@ -31,6 +31,7 @@ runs:
         WIKISYNC_TEAM:   ${{ inputs.team }}
         WIKISYNC_SOURCE: ${{ inputs.source }}
         WIKISYNC_BUILD:  ${{ inputs.build }}
+        WIKISYNC_POSTER: ${{ inputs.poster }}
 
     - name: Print Upload Map
       run: cat upload_map.yml
